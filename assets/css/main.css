@@ -2328,6 +2328,7 @@ input, select, textarea {
 
 		.image.left, .image.right {
 			max-width: 40%;
+			width: 15em;
 		}
 
 			.image.left img, .image.right img {
@@ -2373,6 +2374,14 @@ input, select, textarea {
 				}
 
 			}
+	
+/* researcher-container */
+
+	.researcher-container {
+  		display: flex !important;
+  		flex-direction: column !important;
+	}
+
 
 /* Table */
 
