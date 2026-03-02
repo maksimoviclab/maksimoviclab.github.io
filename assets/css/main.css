@@ -2867,6 +2867,7 @@ input, select, textarea {
 		position: relative;
 		width: 100%
 		overflow: hidden;
+		padding-bottom: 30vh;
 		/* background-image: url('../../images/header2.png');
 		background-size: cover;
 		background-position: top;
@@ -2885,14 +2886,34 @@ input, select, textarea {
 			position: absolute;
 			top: 0;
 			left: 0;
+			
+			-webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  			mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+			mask-repeat: no-repeat; /* Ensure the gradient doesn't tile */
+			-webkit-mask-repeat: no-repeat;
 		}
 
-		.hero-content {
+		#header h1{
+			position: absolute;
+			top: 30%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #e6ebeb;
+			font-size: 5rem;
+			z-index: 2;
+			text-align: center;
+		}
+
+		#header span {
+			background-color:rgb(70, 70, 70);
+		}
+
+		/* .hero-content {
   			position: relative;
     		z-index: 2;
     		color: white;
     		text-align: center;
-    		padding-top: 40vh;
+    		padding-top: 30vh;
 		}
 
 		#header .logo {
@@ -2920,7 +2941,7 @@ input, select, textarea {
 					display: block;
 					width: 4em;
 					height: 4em;
-				}
+				} */
 
 		#header nav {
 			position: fixed;
@@ -3008,11 +3029,16 @@ input, select, textarea {
 							opacity: 0;
 						}
 
+
 		@media screen and (max-width: 736px) {
 
 			#header {
-				padding: 4em 0 0.1em 0 ;
+				padding: 4em 0 30vh 0 ;
 			}
+
+				#header h1{
+					font-size: 4rem;
+				}
 
 				#header nav {
 					right: 0.5em;
