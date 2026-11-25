@@ -1739,3 +1739,110 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+/* ---- People section ---- */
+
+/* Group headings (Postdocs, Grad Students, ...) */
+#people .group-title {
+    font-size: 0.85rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    margin: 3.5rem 0 1.5rem 0;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* PI: photo on the left, text on the right, on its own row */
+#people .pi-card {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+#people .pi-card img {
+    width: 220px;
+    height: 220px;
+    flex-shrink: 0;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+#people .pi-text h3 {
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+    margin: 0 0 0.6rem 0;
+}
+
+#people .pi-text .role {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 0.8rem 0;
+}
+
+#people .pi-text .bio {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Rows for everyone else: centered, wraps if there are many people */
+#people .people-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem 2rem;
+}
+
+#people .person {
+    width: 200px;
+    text-align: center;
+}
+
+#people .person img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    display: block;
+    margin: 0 auto 1rem auto;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+#people .person:hover img {
+    transform: scale(1.05);
+    border-color: #fff;
+}
+
+#people .person h3 {
+    font-size: 0.95rem;
+    letter-spacing: 0.1rem;
+    margin: 0 0 0.4rem 0;
+}
+
+#people .person .role {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin: 0 0 0.4rem 0;
+    opacity: 0.9;
+}
+
+#people .person .bio {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin: 0;
+    opacity: 0.7;
+}
+
+/* Phones: stack the PI photo above the text */
+@media screen and (max-width: 736px) {
+    #people .pi-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
