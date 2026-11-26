@@ -1744,7 +1744,7 @@ input, select, textarea {
 
 /* Group headings (Postdocs, Grad Students, ...) */
 #people .group-title {
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     margin: 3.5rem 0 1.5rem 0;
